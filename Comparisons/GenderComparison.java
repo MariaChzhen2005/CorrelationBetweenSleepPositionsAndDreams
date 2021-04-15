@@ -19,30 +19,32 @@ public class GenderComparison extends Application {
         final NumberAxis yAxis = new NumberAxis();
         final BarChart<String,Number> bc = 
             new BarChart<>(xAxis,yAxis);
-        bc.setTitle("Country Summary");
+        bc.setTitle("Summary");
         xAxis.setLabel("Emotional parameters of dreams by gender");       
         yAxis.setLabel("Value");
  
-        XYChart.Series series1 = new XYChart.Series();
-        series1.setName("Male");       
-        series1.getData().add(new XYChart.Data(vividity, 25601.34));
-        series1.getData().add(new XYChart.Data(bizarreness, 20148.82));
-        series1.getData().add(new XYChart.Data(happiness, 10000));
-        series1.getData().add(new XYChart.Data(scariness, 35407.15));
-        series1.getData().add(new XYChart.Data(romance, 12000));      
+        XYChart.Series male = new XYChart.Series();
+        male.setName("Male");       
+        male.getData().add(new XYChart.Data(vividity, 5.7366));
+        male.getData().add(new XYChart.Data(bizarreness, 6.535));
+        male.getData().add(new XYChart.Data(happiness, 5.5926));
+        male.getData().add(new XYChart.Data(scariness, 3.247));
+        male.getData().add(new XYChart.Data(romance, 4.2428));      
         
-        XYChart.Series series2 = new XYChart.Series();
-        series2.setName("Female");
-        series2.getData().add(new XYChart.Data(vividity, 57401.85));
-        series2.getData().add(new XYChart.Data(bizarreness, 41941.19));
-        series2.getData().add(new XYChart.Data(happiness, 45263.37));
-        series2.getData().add(new XYChart.Data(scariness, 117320.16));
-        series2.getData().add(new XYChart.Data(romance, 14845.27));  
+        XYChart.Series female = new XYChart.Series();
+        female.setName("Female");
+        female.getData().add(new XYChart.Data(vividity, 6.4628));
+        female.getData().add(new XYChart.Data(bizarreness, 6.8877));
+        female.getData().add(new XYChart.Data(happiness, 5.5861));
+        female.getData().add(new XYChart.Data(scariness, 3.9109));
+        female.getData().add(new XYChart.Data(romance, 4.2906));  
 
         Scene scene  = new Scene(bc,800,600);
-        bc.getData().addAll(series1, series2);
+        bc.getData().addAll(male, female);
         stage.setScene(scene);
         stage.show();
+        
+
     }
  
     public static void main(String[] args) {
