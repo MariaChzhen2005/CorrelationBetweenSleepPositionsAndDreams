@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#12162e"/>
+    </linearGradient>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#9aa5ff"/>
+      <stop offset="1" stop-color="#a6e3e9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g transform="translate(80,100)" fill="#e7e9f1">
+    <text x="0" y="0" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-weight="700" font-size="64">Sleep Positions × Dreams</text>
+    <text x="0" y="54" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-weight="400" font-size="28" fill="#aab0c0">Do sleep positions shape our dreams?</text>
+  </g>
+  <g transform="translate(80,250)">
+    <rect x="0" y="0" width="480" height="260" rx="18" fill="#111735" stroke="rgba(255,255,255,0.1)"/>
+    <text x="24" y="48" font-size="28" fill="#e7e9f1" font-family="Inter" font-weight="600">Highlights</text>
+    <text x="24" y="90" font-size="22" fill="#aab0c0" font-family="Inter">• Right-side → happier, less vivid</text>
+    <text x="24" y="122" font-size="22" fill="#aab0c0" font-family="Inter">• Left-side → more vivid, scarier</text>
+    <text x="24" y="154" font-size="22" fill="#aab0c0" font-family="Inter">• Stomach → sadder, bizarre, romantic</text>
+    <text x="24" y="186" font-size="22" fill="#aab0c0" font-family="Inter">• Back → least scary and bizarre</text>
+  </g>
+  <g transform="translate(680,220)">
+    <circle cx="160" cy="95" r="90" fill="url(#g)"/>
+    <circle cx="60" cy="50" r="6" fill="#fff"/>
+    <circle cx="100" cy="36" r="5" fill="#fff"/>
+    <circle cx="36" cy="90" r="4" fill="#fff"/>
+  </g>
+</svg> 

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Do Sleep Positions Shape Our Dreams? • Portfolio Study</title>
+  <meta name="description" content="An interactive summary of our large-scale study on how sleep positions correlate with dream qualities in teenagers.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <meta property="og:title" content="Do Sleep Positions Shape Our Dreams?">
+  <meta property="og:description" content="Explore correlations between sleep positions and dream qualities in a 1,225-participant study.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og-image.svg">
+</head>
+<body data-page="home">
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">Sleep Positions × Dreams</a>
+      <nav>
+        <ul>
+          <li><a data-nav="home" href="index.html">Home</a></li>
+          <li><a data-nav="explore" href="explore.html">Explore</a></li>
+          <li><a data-nav="findings" href="findings.html">Findings</a></li>
+          <li><a data-nav="methodology" href="methodology.html">Methodology</a></li>
+          <li><a data-nav="about" href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" class="btn">Toggle theme</button>
+    </div>
+  </header>
+  <main class="main">
+    <section class="hero">
+      <div class="container">
+        <p class="kicker">Portfolio research project</p>
+        <h1>Do sleep positions shape our dreams?</h1>
+        <p class="muted">We surveyed 1,225 teenagers about their sleep habits and dream qualities, then analyzed correlations with custom code. Explore interactive charts, read the key findings, and dive into the full report.</p>
+        <div class="ctas">
+          <a class="btn primary" href="explore.html">Explore the data</a>
+          <a class="btn" href="findings.html">Read findings</a>
+          <a class="btn" href="assets/science-fair.pdf">Download full PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container grid cards">
+        <div class="card">
+          <h3>Largest teen dream study</h3>
+          <p>1,225 respondents aged 13–19; survey via social platforms and ads.</p>
+        </div>
+        <div class="card">
+          <h3>Positions × emotions</h3>
+          <p>We track happiness, scariness, vividity, bizarreness, and romance.</p>
+        </div>
+        <div class="card">
+          <h3>Transparent methods</h3>
+          <p>Data and analysis scripts are open. Reproducibility matters.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="notice">
+          <strong>TL;DR:</strong> Right-side sleep tends to align with happier, less vivid dreams; left-side aligns with more vivid and scarier dreams; stomach sleep aligns with sadder, more bizarre and more romantic dreams; back sleep aligns with less scary and less bizarre dreams.
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="small">© <span id="y"></span> Sleep Positions × Dreams • Built for GitHub Pages</div>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script src="scripts/main.js"></script>
+</body>
+</html> 

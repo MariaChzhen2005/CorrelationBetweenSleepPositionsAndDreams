@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Methodology • Sleep Positions × Dreams</title>
+  <meta name="description" content="Data collection, preprocessing, grouping rules, and limitations for the study.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="methodology">
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">Sleep Positions × Dreams</a>
+      <nav>
+        <ul>
+          <li><a data-nav="home" href="index.html">Home</a></li>
+          <li><a data-nav="explore" href="explore.html">Explore</a></li>
+          <li><a data-nav="findings" href="findings.html">Findings</a></li>
+          <li><a data-nav="methodology" href="methodology.html">Methodology</a></li>
+          <li><a data-nav="about" href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" class="btn">Toggle theme</button>
+    </div>
+  </header>
+  <main class="main container">
+    <h2>Methodology</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Participants and instrument</h3>
+        <ul class="clean muted">
+          <li><strong>N</strong>: 1,225 teenagers (ages 13–19)</li>
+          <li><strong>Recruitment</strong>: Social media + paid ads</li>
+          <li><strong>Measures</strong>: Sleep position at sleep/wake, dream qualities (happiness, scariness, vividity, bizarreness, romance), habits (screen time, sleep length), demographics</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Preprocessing</h3>
+        <ul class="clean muted">
+          <li>Parsed ranges (e.g., 6–8 hours) to midpoints</li>
+          <li>Excluded blanks and zeros for averages</li>
+          <li>Grouped wake positions into body orientations</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Position grouping</h3>
+        <p class="muted">Wake positions mapped to categories based on our analysis code:</p>
+        <ul class="clean muted">
+          <li><strong>Back</strong>: 1, 4, 5, 12, 13, 14, 16, 20, 22</li>
+          <li><strong>Left</strong>: 3, 6, 11, 21</li>
+          <li><strong>Right</strong>: 9, 18, 19, 23</li>
+          <li><strong>Stomach</strong>: 2, 7, 8, 10, 15, 17, 24</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Limitations</h3>
+        <ul class="clean muted">
+          <li>Self-report bias; variability in interpretation of questions</li>
+          <li>Correlation does not imply causation</li>
+          <li>Potential confounders (screen time, sleep length) not fully controlled</li>
+        </ul>
+      </div>
+    </div>
+
+    <p><a class="btn" href="assets/science-fair.pdf">Download full report (PDF)</a></p>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="small">Reproducibility: see repository for CSV and scripts.</div>
+    </div>
+  </footer>
+  <script src="scripts/main.js"></script>
+</body>
+</html> 

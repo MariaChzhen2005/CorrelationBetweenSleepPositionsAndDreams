@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explore the Data • Sleep Positions × Dreams</title>
+  <meta name="description" content="Interactive charts showing correlations between sleep positions and dream qualities.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="explore">
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html">Sleep Positions × Dreams</a>
+      <nav>
+        <ul>
+          <li><a data-nav="home" href="index.html">Home</a></li>
+          <li><a data-nav="explore" href="explore.html">Explore</a></li>
+          <li><a data-nav="findings" href="findings.html">Findings</a></li>
+          <li><a data-nav="methodology" href="methodology.html">Methodology</a></li>
+          <li><a data-nav="about" href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" class="btn">Toggle theme</button>
+    </div>
+  </header>
+  <main class="main container">
+    <div class="section-title">
+      <h2>Explore the data</h2>
+      <div class="controls">
+        <label for="metric-select">Metric</label>
+        <select id="metric-select">
+          <option value="vividity">Vividity</option>
+          <option value="happiness">Happiness</option>
+          <option value="scariness">Scariness</option>
+          <option value="bizarreness">Bizarreness</option>
+          <option value="romance">Romance</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Position category × emotional metrics</h3>
+        <div id="heatmap" class="chart" role="img" aria-label="Heatmap of average emotional scores per position category"></div>
+        <div class="caption">Average scores range 1–10. Categories based on grouped wake-up positions.</div>
+      </div>
+      <div class="card">
+        <h3>Average by position category</h3>
+        <div id="bar" class="chart" role="img" aria-label="Bar chart of selected metric by position category"></div>
+        <div class="caption">Change the metric with the selector above.</div>
+      </div>
+    </div>
+
+    <p class="small muted">Note: Correlation ≠ causation. Self-report bias and confounders (screen time, sleep length) may influence results.</p>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="small">Data: <code>SleepPositionsData.csv</code>. Source and scripts in repository.</div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/charts.js"></script>
+</body>
+</html> 
