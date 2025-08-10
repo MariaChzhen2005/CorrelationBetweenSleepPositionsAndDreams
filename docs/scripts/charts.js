@@ -128,7 +128,7 @@ function renderHeatmap(el, data) {
   g.append('g').attr('class', 'x-axis').attr('transform', `translate(0,${h})`).call(d3.axisBottom(x));
   g.append('g').attr('class', 'y-axis').call(d3.axisLeft(y));
 
-  const tiles = g.selectAll('rect').data(data).enter().append('rect')
+  g.selectAll('rect').data(data).enter().append('rect')
     .attr('x', d => x(d.metric))
     .attr('y', d => y(d.cat))
     .attr('width', x.bandwidth())
@@ -146,16 +146,16 @@ function renderHeatmap(el, data) {
     .attr('font-size', 12)
     .text(d => (d.value == null ? '' : fmt(d.value)));
 
-  // legend
   const legendW = 160, legendH = 10;
   const legend = svg.append('g').attr('transform', `translate(${width - legendW - 12}, ${margin.top})`);
   const lg = d3.range(legendW).map(i => i / (legendW - 1));
+  const extent = d3.extent(values);
   legend.selectAll('rect').data(lg).enter().append('rect')
     .attr('x', (d, i) => i)
     .attr('y', 0)
     .attr('width', 1)
     .attr('height', legendH)
-    .attr('fill', d => color(d3.interpolate(d3.min(values), d3.max(values))(d)));
+    .attr('fill', d => color(extent[0] + d * (extent[1] - extent[0])));
   legend.append('text').attr('x', 0).attr('y', -6).attr('fill', '#aab0c0').attr('font-size', 12).text('Avg score');
 }
 
@@ -196,8 +196,9 @@ async function initExplore() {
   const barEl = document.querySelector('#bar');
   const select = document.querySelector('#metric-select');
   if (barEl && select) {
-    function update() { renderBar(barEl, agg, select.value); }
+    const update = () => renderBar(barEl, agg, select.value);
     select.addEventListener('change', update);
+    select.addEventListener('input', update);
     update();
   }
 }
